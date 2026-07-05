@@ -1140,14 +1140,14 @@ function AppShell() {
   ];
 
   return (
-    <div className={`min-h-screen w-full flex justify-center items-start md:items-center ${t.text}`}>
+    <div className={`min-h-screen w-full flex justify-center items-start lg:items-center ${t.text}`}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
         .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
         .font-body { font-family: 'Inter', system-ui, sans-serif; }
       `}</style>
       <AppBackground />
-      <div className={`w-full max-w-sm h-screen md:h-[844px] flex flex-col relative font-body overflow-hidden md:rounded-[2.5rem] md:my-8 ${t.shadow}`}>
+      <div className={`w-full lg:max-w-sm h-screen lg:h-[844px] flex flex-col relative font-body overflow-hidden lg:rounded-[2.5rem] lg:my-8 ${t.shadow}`}>
         <div className="flex-1 px-5 pb-28 pt-6 overflow-y-auto">
           {screen === "home" && (
             <HomeScreen
