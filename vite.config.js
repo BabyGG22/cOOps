@@ -6,5 +6,5 @@ import react from "@vitejs/plugin-react";
 // If using a custom domain or a *user/org* page (<user>.github.io), use "/".
 export default defineConfig({
   plugins: [react()],
-  base: "/coopai/",
+  base: "/cOOps/",
 });
