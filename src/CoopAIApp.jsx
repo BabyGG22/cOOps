@@ -1140,14 +1140,14 @@ function AppShell() {
   ];
 
   return (
-    <div className={`min-h-screen w-full flex justify-center ${t.text}`}>
+    <div className={`min-h-screen w-full flex justify-center items-start md:items-center ${t.text}`}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
         .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
         .font-body { font-family: 'Inter', system-ui, sans-serif; }
       `}</style>
       <AppBackground />
-      <div className="w-full max-w-sm min-h-screen flex flex-col relative font-body">
+      <div className={`w-full max-w-sm h-screen md:h-[844px] flex flex-col relative font-body overflow-hidden md:rounded-[2.5rem] md:my-8 ${t.shadow}`}>
         <div className="flex-1 px-5 pb-28 pt-6 overflow-y-auto">
           {screen === "home" && (
             <HomeScreen
@@ -1192,7 +1192,7 @@ function AppShell() {
           {screen === "profile" && <ProfileScreen onBack={() => setScreen("home")} />}
         </div>
 
-        <div className={`fixed bottom-0 w-full max-w-sm ${t.navBg} backdrop-blur px-4 pt-2 pb-3`}>
+        <div className={`absolute bottom-0 left-0 right-0 ${t.navBg} backdrop-blur px-4 pt-2 pb-3`}>
           <div className="flex items-center justify-between relative">
             {NAV.slice(0, 2).map((n) => (
               <NavButton key={n.id} n={n} active={screen === n.id} onClick={() => setScreen(n.id)} />
